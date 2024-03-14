@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+        <style>
+            select { height: 30px; }
+        </style>
+        <script src="https://p.trellocdn.com/power-up.min.js"></script>
+    </head>
+    <body>
+        <form id="card">
+            <label for="cardType"> Card Type:</label>
+            <select name="type" id="cardType">
+                <option value="Select">Select</option>
+                <option value="Hypothesis">Hypothesis</option>
+                <option value="Design">Design</option>
+                <option value="Experiment">Experiment</option>
+            </select>
+            <button type="Submit" class="mod-primary">Save</button>
+            <button type="reset" onclick="resetCardType()" class="btn btn-default">Reset Card Type</button>
+            <button type="reset" onclick="resetCardCreation()" class="btn btn-default">Reset Card Creation</button>
+        </form>       
+        <script src="./js/card.js"></script>
+    </body>
+</html>

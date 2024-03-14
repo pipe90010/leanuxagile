@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+    <link rel="stylesheet" href="./css/board-bar.css">
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <h2>Tips managing the scoring system</h2>
+      <hr/>
+      <ol>
+        <li>For each session of writing/revising hypotheses, the team earns 5 points. Additionally, the team earns extra 10 points for each session of writing/revising hypotheses collaboratively, where all team members are involved. </li>
+        <li>The team earns 5 points for running a design studio, and another extra 10 points for involving all team members in the process of ideation and sketching.</li>
+        <li>The team gets 10 points for producing an experiment story for each hypothesis and adding it the sprint backlog.</li>
+        <li>The team earns 5 points for each weekly user experiment and extra 10 points for the participation of all team members</li>
+      </ol>
+    </div>
+    <div id="score">
+        <img id="fivepoints" src="./images/five.png">
+        <img id="tenpoints" src="./images/ten.png">
+        <a id="showImage">Show image</a>
+    </div>
+    <div>
+      <button type="button" onclick="incrementFivePoints()">Add Five Points</button>
+      <button type="button" onclick="decrementFivePoints()">Substract Five Points</button>
+      <button type="reset" onclick="resetFivePoints()">Reset Five Points</button>      
+      <button type="reset" onclick="eraseFivePoints()">Erase Five Points</button 
+    </div>
+    <div>
+      <button type="button" onclick="incrementTenPoints()">Add Ten Points</button>
+      <button type="button" onclick="decrementTenPoints()">Substract Ten Points</button>
+      <button type="reset" onclick="resetTenPoints()">Reset Ten Points</button>
+      <button type="reset" onclick="eraseTenPoints()">Erase Ten Points</button
+    </div>
+    <script src="./js/board-bar.js"></script>
+  </body>
+</html>

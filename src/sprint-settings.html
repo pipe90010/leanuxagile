@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+    <link rel="stylesheet" href="./css/board-bar.css">
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+    <h3>Create a list for your sprint</h3>
+    <h4>Sprint Number</h4>
+    <p>Enter a sprint number:</p>
+    <div>
+      <span>
+        <input type="button" onclick="incrementValue()" value="Increment Sprint Number" />
+        <label id="number">Sprint 0</label>
+        <input type="button" onclick="decrementValue()" value="Decrement Sprint Number" />
+      </span>      
+    </div>
+    <div><input type="button" onclick="eraseSprintDueDate()" value="Reset" /></div>    
+    <div class="controlset-pad">
+      <label>Check it this is the list for completed task of this sprint:</label>
+      <input type="checkbox" name="others" onclick="enable_due(this.checked)" class="medium" />
+      <h4>Due Date</h4>
+      <form name="form_due">
+        <input type="date" id="dueId" name="due"  disabled="disabled">
+      </form>      
+    </div>
+  <button onclick="createSprintList()">Create List</button>            
+    <script src="./js/sprint-setting.js"></script>
+  </body>
+</html>

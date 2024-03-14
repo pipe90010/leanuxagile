@@ -1,0 +1,30 @@
+{
+  "name": "Lean-UX",
+  "details": "A Trello power-up to manage Lean-UX gamification",
+  "permissions": [
+    "http://trello.com/b*",
+    "https://trello.com/b*",
+    "tabs",
+    "storage"
+    ],
+    "web_accessible_resources": [
+  "index.html",
+  "icon.png",
+  "inline.plugin.js",
+  "https://ssl.google-analytics.com/ga.js"
+  ],
+  "icon": {
+    "url": "./images/logo.svg"
+  },
+  "author": "Luis Arias",
+  "capabilities": [
+    "callback",
+    "card-badges",
+    "card-detail-badges"
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "./index.html"
+    }
+  }
+}

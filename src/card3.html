@@ -1,0 +1,29 @@
+<script>
+    const container = document.getElementById('card-component-example');
+    container.innerText = 'Loading...';
+  
+    const scriptSrc = window.customElements ? '/card.min.js' : '/card-polyfilled.min.js';
+    const cardJs = document.createElement('script');
+    cardJs.crossOrigin = 'anonymous';
+    cardJs.src = 'https://p.trellocdn.com' + scriptSrc;
+  
+    cardJs.onload = function() {
+      fetch('https://api.trello.com/1/card/MA6fxIg3?fields=name,closed,url,badges,cover,isTemplate,labels&customFields=true&customFieldItems=true&members=true&stickers=true')
+      .then(function(resp) {
+        return resp.json();
+      })
+      .then(function(card) {
+        const cardEl = document.createElement('trello-card');
+        cardEl.card = card;
+        container.innerHTML = '';
+        container.appendChild(cardEl);
+      });
+    }
+    document.head.appendChild(cardJs);
+  </script>
+  
+  <div style="width:272px;background-color:#dfe1e6;padding:8px;">
+    <div id="card-component-example">
+      <!-- Card Component Will Be Inserted Here -->
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+.parent{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.board{
+    width: 55%;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+.over-img{    
+    position: absolute;
+    height: auto;
+}
